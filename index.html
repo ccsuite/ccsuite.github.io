@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ccacc: Claude Code across your Claude accounts</title>
+<meta name="description" content="Track the usage of your Claude accounts and move Claude Code to the one with room. Windows and macOS.">
+<style>
+  :root { --bg: #fbfaf8; --fg: #1f1d1a; --muted: #6b665e; --accent: #d97757; --code: #efece6; --line: #e3dfd7; }
+  @media (prefers-color-scheme: dark) { :root { --bg: #1b1a18; --fg: #ece8e1; --muted: #a39d92; --code: #26241f; --line: #34312b; } }
+  html { background: var(--bg); }
+  body { max-width: 46rem; margin: 0 auto; padding: 2.5rem 1rem 4rem; font: 17px/1.6 system-ui, sans-serif; color: var(--fg); }
+  h1 { font-size: 2.2rem; margin: 0 0 .2rem; } h1 span { color: var(--accent); }
+  h2 { margin-top: 2.4rem; font-size: 1.25rem; }
+  p.lead { font-size: 1.15rem; color: var(--muted); margin-top: 0; }
+  img { max-width: 100%; height: auto; border: 1px solid var(--line); border-radius: 8px; margin: .6rem 0; }
+  pre { background: var(--code); padding: .8rem 1rem; border-radius: 8px; overflow-x: auto; font-size: .9rem; }
+  code { font-family: ui-monospace, Consolas, monospace; }
+  a { color: var(--accent); }
+  .note { color: var(--muted); font-size: .95rem; }
+</style>
+</head>
+<body>
+<h1><span>cc</span>acc</h1>
+<p class="lead">If you use Claude Code with more than one Claude subscription, ccacc shows how much of each is used and moves Claude Code to the one with the most room.</p>
+
+<img src="img/accounts.png" alt="The ccacc window: every account with its 5-hour and weekly use, and the mode">
+
+<h2>What it does</h2>
+<ul>
+  <li>Shows the 5-hour use, the weekly use, the weekly pace and what is free for every account, and the same added up over all of them.</li>
+  <li>Switches Claude Code to another account in one click. A switch you make is respected: automatic rebalancing waits half an hour before moving you again.</li>
+  <li>Three modes: <b>Auto</b> moves Claude Code when an account runs out; <b>Locked</b> never moves it but still warns you; <b>Paused</b> does not poll.</li>
+  <li>A limit per account, and a <b>monitor only</b> mode for accounts that are watched but never switched to.</li>
+  <li>Windows: a small card in the taskbar.</li>
+</ul>
+<img src="img/taskbar-card.png" alt="The taskbar card: four accounts and the all-accounts page">
+
+<h2>Install</h2>
+<p>Windows, in cmd or PowerShell:</p>
+<pre><code>curl.exe -fLo ccacc.exe https://github.com/ccsuite/ccsuite/releases/download/v0.1.0-beta.1/ccacc.exe
+.\ccacc.exe install --start-at-login</code></pre>
+<p>macOS, in Terminal:</p>
+<pre><code>curl -fLo /tmp/ccacc https://github.com/ccsuite/ccsuite/releases/download/v0.1.0-beta.1/ccacc-macos-$(uname -m) &amp;&amp; chmod +x /tmp/ccacc &amp;&amp; /tmp/ccacc install --start-at-login</code></pre>
+<p class="note">This is a beta. Windows is in daily use. On the Mac the tray icon, the windows and the Keychain access have not yet been tried by a person; reports are welcome. The Mac binary is signed ad hoc, not by an Apple developer; downloaded with <code>curl</code> it opens as it is.</p>
+
+<h2>Managing accounts</h2>
+<img src="img/manage-accounts.png" alt="Managing accounts: name, limit, monitor only">
+
+<h2>More</h2>
+<p>Source, the full README and the releases: <a href="https://github.com/ccsuite/ccsuite">github.com/ccsuite/ccsuite</a>. Licence: Apache 2.0.</p>
+</body>
+</html>
