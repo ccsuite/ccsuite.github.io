@@ -32,7 +32,7 @@
   <li>Switches Claude Code to another account in one click. A switch you make is respected: automatic rebalancing waits half an hour before moving you again.</li>
   <li>Three modes: <b>Auto</b> moves Claude Code when an account runs out; <b>Locked</b> never moves it but still warns you; <b>Paused</b> does not poll.</li>
   <li>A limit per account, and a <b>monitor only</b> mode for accounts that are watched but never switched to.</li>
-  <li>Windows: a small card in the taskbar.</li>
+  <li>A small always-on-top usage window, bottom right of the screen, that remembers where you put it (optional: a card in a Windows 10 style taskbar).</li>
   <li>Two local lanes for Claude Code, off until you switch them on: a <b>paid lane</b> through your paid accounts, and a <b>free lane</b> through your own free claude.ai accounts that picks the account with the most room for each new conversation. The free lane drives claude.ai the way a browser does, so it may stop working when claude.ai changes.</li>
   <li>Windows: gives back the memory of idle Claude Code sessions (<code>ccacc trim on</code>), without ending or changing them. Off until you switch it on.</li>
 </ul>
@@ -41,11 +41,11 @@
 
 <h2>Install</h2>
 <p>Windows, in cmd or PowerShell:</p>
-<pre><code>curl.exe -fLo ccacc.exe https://github.com/ccsuite/ccsuite/releases/download/v0.1.0-beta.4/ccacc.exe
+<pre><code>curl.exe -fLo ccacc.exe https://github.com/ccsuite/ccsuite/releases/download/v0.1.0-beta.5/ccacc.exe
 .\ccacc.exe install --start-at-login</code></pre>
 <p>macOS, in Terminal:</p>
-<pre><code>curl -fLo /tmp/ccacc https://github.com/ccsuite/ccsuite/releases/download/v0.1.0-beta.4/ccacc-macos-$(uname -m) &amp;&amp; chmod +x /tmp/ccacc &amp;&amp; /tmp/ccacc -Xjr:yes install --start-at-login</code></pre>
-<p class="note">This is a beta. Windows is in daily use. On the Mac the tray icon, the windows and the Keychain access have not yet been tried by a person; reports are welcome. The Mac binary is signed ad hoc, not by an Apple developer; downloaded with <code>curl</code> it opens as it is.</p>
+<pre><code>curl -fLo /tmp/ccacc https://github.com/ccsuite/ccsuite/releases/download/v0.1.0-beta.5/ccacc-macos-$(uname -m) &amp;&amp; chmod +x /tmp/ccacc &amp;&amp; /tmp/ccacc -Xjr:yes install --start-at-login</code></pre>
+<p class="note">This is a beta. Windows 11 with the old taskbar (ExplorerPatcher) is in daily use; on the standard Windows 11 taskbar the usage window is the default display and nobody has looked at it on a real machine yet; Windows 10 has not been tried. On the Mac the tray icon, the windows and the Keychain access have not yet been tried by a person; reports are welcome. The Mac binary is signed ad hoc, not by an Apple developer; downloaded with <code>curl</code> it opens as it is.</p>
 
 <h2>Coming from ccu, cswap or ccls</h2>
 <p>ccacc replaces all three. <code>ccacc migrate</code> shows its plan first and, with <code>--apply</code>, archives the old tools; it never deletes. Until then <code>ccacc ccu</code>, <code>ccacc cswap</code> and <code>ccacc ccls</code> run them with their old options.</p>
