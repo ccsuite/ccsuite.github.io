@@ -2,9 +2,26 @@
   "format" : 1,
   "app" : "io.github.ccsuite:ccacc",
   "channels" : {
-    "beta" : "0.1.0-beta.6"
+    "beta" : "0.1.0-beta.7"
   },
   "releases" : [ {
+    "version" : "0.1.0-beta.7",
+    "released" : "2026-11-12T10:10:33Z",
+    "exe" : {
+      "windows-x86_64" : {
+        "sha256" : "920ed2aef4cf359cbe1ab077056114e9088a23f4089356787229d09aa54547bb",
+        "urls" : [ "https://github.com/ccsuite/ccsuite/releases/download/v0.1.0-beta.7/ccacc.exe" ]
+      },
+      "macos-arm64" : {
+        "sha256" : "f8c986a7f35412d91a7dc1a6375b0d84cbc0a74e19c8e6cc49f88ef91dc06d03",
+        "urls" : [ "https://github.com/ccsuite/ccsuite/releases/download/v0.1.0-beta.7/ccacc-macos-arm64" ]
+      },
+      "macos-x86_64" : {
+        "sha256" : "d886bf8210b5013fdad9033749da74385acd5862f0b136301e6a35c80b3eeee5",
+        "urls" : [ "https://github.com/ccsuite/ccsuite/releases/download/v0.1.0-beta.7/ccacc-macos-x86_64" ]
+      }
+    }
+  }, {
     "version" : "0.1.0-beta.6",
     "released" : "2026-11-11T01:59:58Z",
     "exe" : {
